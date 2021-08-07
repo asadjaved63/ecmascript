@@ -9,4 +9,16 @@ let funB = ()=>{
 console.log('function B run');
 }
 funA('Asad', funB);
+  
+  // Closure in JavaScript
+  let outerFun = (a) => {
+    let b= 10;
+    let innerFun = ()=>{
+        let sum = a+b;
+        console.log(`Sum of a+b ${sum}`);
+    }
+    return innerFun;
+}
+let inner = outerFun(5);
+inner();
 </script>
